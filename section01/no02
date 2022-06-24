@@ -1,0 +1,27 @@
+```javascript
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(a, b, c) {
+        let answer = 'Yes';
+        let max; //가장 긴 변
+        if (a < b) max = b;
+        else max = a;
+
+        if (max < c) max = c;
+
+        if (a + b + c - max <= max) answer = 'No';
+
+        return answer;
+      }
+
+      console.log(solution(6, 7, 11)); //Yes
+      console.log(solution(13, 33, 17)); //No
+    </script>
+  </body>
+</html>
+```
